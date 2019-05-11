@@ -1,0 +1,7 @@
+---
+- hosts: yuyang-aws
+  vars:
+    staging: no
+  roles:
+    - wiki
+

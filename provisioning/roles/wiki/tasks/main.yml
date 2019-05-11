@@ -1,0 +1,45 @@
+- name: create work dir
+  file:
+    path: "{{ workdir }}"
+    state: directory
+    mode: 0755
+    owner: "{{ user }}"
+    group: "{{ group }}"
+
+- name: create log file
+  file:
+    path: "{{ log_file }}"
+    state: touch
+    mode: 0755
+    owner: "{{ user }}"
+    group: "{{ group }}"
+
+- name: git pull from github
+  git:
+    repo: "{{ git_repo }}"
+    dest: "{{ workdir }}"
+    force: yes
+
+- name: create binary excuted file
+  environment:
+    - PATH: $PATH:/usr/local/go/bin
+  shell: go build "{{ workdir }}/wiki.go"
+  args:
+    chdir: "{{ workdir }}"
+
+- name: play template module
+  template:
+    src: supervisor.conf.j2
+    dest: /etc/supervisor/conf.d/wiki.conf
+    mode: 0644
+    owner: "{{ user }}"
+    group: "{{ group }}"
+
+- name: start supervisor
+  supervisorctl:
+    name: wiki
+    state: restarted
+
+
+
+

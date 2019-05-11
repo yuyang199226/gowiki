@@ -97,11 +97,17 @@ func GeTest(w http.ResponseWriter, req *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.Write([]byte("test ansible"))
 }
+
+func Books(w http.ResponseWriter, req *http.Request) {
+	w.Write([]byte("book"))
+}
 func main() {
 	http.HandleFunc("/view/", makeHandler(viewHandler))
 	http.HandleFunc("/edit/", makeHandler(editHandler))
 	http.HandleFunc("/save/", makeHandler(saveHandler))
 	http.HandleFunc("/ge/sync", GeSync)
 	http.HandleFunc("/test/ansible", GeTest)
+	http.HandleFunc("/books", Books)
+
 	log.Fatal(http.ListenAndServe("0.0.0.0:8080", nil))
 }
