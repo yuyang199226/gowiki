@@ -27,13 +27,21 @@
   args:
     chdir: "{{ workdir }}"
 
+- name: create config.json file
+  template:
+    src: config.json.j2
+    dest: "{{ workdir }}/config.json"
+    mode: 0644
+    owner: "{{ user }}"
+    group: "{{ group }}"
+
 - name: play template module
   template:
     src: supervisor.conf.j2
     dest: /etc/supervisor/conf.d/wiki.conf
     mode: 0644
-    owner: "{{ user }}"
-    group: "{{ group }}"
+    owner: root
+    group: root
 
 - name: start supervisor
   supervisorctl:
