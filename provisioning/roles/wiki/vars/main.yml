@@ -1,7 +1,8 @@
+go_path: "/home/ubuntu/work"
 git_repo: 'https://github.com/yuyang199226/gowiki.git'
 app_repo: gowiki
 workdir: /home/ubuntu/work/src/{{ app_repo }}
-cmd: "/home/ubuntu/work/src/{{ app_repo }}/wiki"
+cmd: "/home/ubuntu/work/src/{{ app_repo }}/gowiki"
 user: ubuntu
 group: ubuntu
 log_file: /tmp/log/wiki.log

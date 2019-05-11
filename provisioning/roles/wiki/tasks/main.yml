@@ -23,7 +23,8 @@
 - name: create binary excuted file
   environment:
     - PATH: $PATH:/usr/local/go/bin
-  shell: go build "{{ workdir }}/wiki.go"
+    - GOPATH: "{{ go_path }}"
+  shell: go build -o gowiki "{{ workdir }}/main.go"
   args:
     chdir: "{{ workdir }}"
 
