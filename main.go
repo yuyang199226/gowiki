@@ -101,7 +101,7 @@ func GeTest(w http.ResponseWriter, req *http.Request) {
 
 func Books(w http.ResponseWriter, req *http.Request) {
 	config := config.Get()
-	w.Write([]byte(config.Password + config.User))
+	w.Write([]byte(config.DataBase.User + config.DataBase.Password))
 }
 func main() {
 	http.HandleFunc("/view/", makeHandler(viewHandler))

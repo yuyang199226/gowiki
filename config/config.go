@@ -9,10 +9,18 @@ import (
 
 const FILE_NAME = "config.json"
 
-type Config struct {
+type DataBase struct {
 	Name string `json:"name"`
 	User string `json:"user"`
 	Password string `json:"password"`
+}
+
+
+type Config struct {
+	DataBase *DataBase `json:"database"`
+	//Name string `json:"name"`
+	//User string `json:"user"`
+	//Password string `json:"password"`
 }
 
 
