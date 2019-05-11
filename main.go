@@ -8,7 +8,8 @@ import (
 	"log"
 	"net/http"
 	"regexp"
-	"gowiki/config"
+		"gowiki/logic"
+	"encoding/json"
 )
 
 type Page struct {
@@ -100,8 +101,12 @@ func GeTest(w http.ResponseWriter, req *http.Request) {
 }
 
 func Books(w http.ResponseWriter, req *http.Request) {
-	config := config.Get()
-	w.Write([]byte(config.DataBase.User + config.DataBase.Password))
+	names := logic.GetBookList()
+	names_json, err := json.Marshal(names)
+	if err != nil {
+		log.Fatal(err)
+	}
+	w.Write(names_json)
 }
 func main() {
 	http.HandleFunc("/view/", makeHandler(viewHandler))
