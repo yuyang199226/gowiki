@@ -20,11 +20,14 @@
     dest: "{{ workdir }}"
     force: yes
 
+- name: Set GOPATH for all users and add to PATH
+  template: src=go-path.sh.j2 dest=/etc/profile.d/go-path.sh mode=644
+
 - name: create binary excuted file
   environment:
-    - PATH: $PATH:/usr/local/go/bin
-    - GOPATH: "{{ go_path }}"
-  shell: go build -o gowiki "{{ workdir }}/main.go"
+    GOPATH : "{{ go_path }}"
+    PATH: "/usr/local/go/bin:{{ go_path }}/bin:{{ ansible_env.PATH }}"
+  shell: go get . && go build -o gowiki "{{ workdir }}/main.go"
   args:
     chdir: "{{ workdir }}"
 
