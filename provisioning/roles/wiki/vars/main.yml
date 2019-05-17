@@ -5,4 +5,4 @@ workdir: /home/ubuntu/work/src/{{ app_repo }}
 cmd: "/home/ubuntu/work/src/{{ app_repo }}/gowiki"
 user: ubuntu
 group: ubuntu
-log_file: /tmp/log/wiki.log
+log_file: /tmp/wikilog/wiki.wikilog

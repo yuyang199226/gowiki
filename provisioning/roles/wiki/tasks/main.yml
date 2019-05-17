@@ -6,7 +6,7 @@
     owner: "{{ user }}"
     group: "{{ group }}"
 
-- name: create log file
+- name: create wikilog file
   file:
     path: "{{ log_file }}"
     state: touch
