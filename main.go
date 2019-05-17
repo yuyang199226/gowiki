@@ -103,8 +103,8 @@ func GeTest(w http.ResponseWriter, req *http.Request) {
 
 func Books(w http.ResponseWriter, req *http.Request) {
 	names := logic.GetBookList()
-	wikilog.Info("info")
-	wikilog.Error("error")
+	wikilog.Info("info", names)
+	wikilog.Error("error",">>>")
 	names_json, err := json.Marshal(names)
 	if err != nil {
 		log.Fatal(err)

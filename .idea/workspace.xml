@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ed7f6f2-b3fa-46fe-8eff-1a0a80eae843" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/error.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gowiki" beforeDir="false" afterPath="$PROJECT_DIR$/gowiki" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning/roles/wiki/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning/roles/wiki/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provisioning/roles/wiki/vars/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/provisioning/roles/wiki/vars/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wikilog/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/wikilog/log.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +22,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="all" value="1" />
-          <entry key="go" value="17" />
+          <entry key="go" value="18" />
           <entry key="hosts" value="1" />
           <entry key="j2" value="8" />
           <entry key="json" value="2" />
@@ -40,7 +35,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Go" value="17" />
+          <entry key="Go" value="18" />
           <entry key="JSON" value="2" />
           <entry key="PLAIN_TEXT" value="20" />
           <entry key="YAML" value="7" />
@@ -49,7 +44,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="all" value="8" />
-          <entry key="go" value="2413" />
+          <entry key="go" value="2447" />
           <entry key="j2" value="140" />
           <entry key="json" value="106" />
           <entry key="vars" value="105" />
@@ -60,7 +55,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="2413" />
+          <entry key="Go" value="2447" />
           <entry key="JSON" value="106" />
           <entry key="PLAIN_TEXT" value="287" />
           <entry key="YAML" value="403" />
@@ -79,14 +74,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wikilog/log.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="336">
+              <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
               <folding>
                 <element signature="e#13#36#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/go/src/log/log.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1460">
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -145,11 +149,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="106" selection-start-line="106" selection-end-line="106" />
+            <state relative-caret-position="270">
+              <caret line="105" column="30" selection-start-line="105" selection-start-column="30" selection-end-line="105" selection-end-column="30" />
               <folding>
                 <element signature="e#14#134#0" expanded="true" />
               </folding>
@@ -193,10 +197,10 @@
         <option value="$PROJECT_DIR$/db/conn.go" />
         <option value="$PROJECT_DIR$/provisioning/roles/wiki/templates/go-path.sh.j2" />
         <option value="$PROJECT_DIR$/log/log.go" />
-        <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/provisioning/roles/wiki/vars/main.yml" />
-        <option value="$PROJECT_DIR$/wikilog/log.go" />
         <option value="$PROJECT_DIR$/provisioning/roles/wiki/tasks/main.yml" />
+        <option value="$PROJECT_DIR$/wikilog/log.go" />
+        <option value="$PROJECT_DIR$/main.go" />
       </list>
     </option>
   </component>
@@ -328,12 +332,6 @@
             </path>
             <path>
               <item name="gowiki" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gowiki" type="462c0819:PsiDirectoryNode" />
-              <item name="wikilog" type="462c0819:PsiDirectoryNode" />
-              <item name="log.go" type="e9541c9c:GoTreeStructureProvider$GoFileNode" />
-            </path>
-            <path>
-              <item name="gowiki" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
@@ -353,6 +351,21 @@
               <item name="Go SDK 1.10.5" type="20ee2d1f:SyntheticLibraryElementNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gowiki" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Go SDK 1.10.5" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gowiki" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Go SDK 1.10.5" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+              <item name="log.go" type="e9541c9c:GoTreeStructureProvider$GoFileNode" />
             </path>
             <path>
               <item name="gowiki" type="b2602c69:ProjectViewProjectNode" />
@@ -416,7 +429,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.5118812" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.43168318" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
@@ -469,13 +482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
           <caret line="200" column="5" selection-start-line="200" selection-start-column="5" selection-end-line="200" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/log/log.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="304" column="5" selection-start-line="304" selection-start-column="5" selection-end-line="304" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -542,16 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
-          <folding>
-            <element signature="e#14#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deploy.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -599,10 +595,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wikilog/log.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="336">
+          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
           <folding>
             <element signature="e#13#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/log/log.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1460">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="105" column="30" selection-start-line="105" selection-start-column="30" selection-end-line="105" selection-end-column="30" />
+          <folding>
+            <element signature="e#14#134#0" expanded="true" />
           </folding>
         </state>
       </provider>
