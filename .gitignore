@@ -3,6 +3,7 @@
 *.exe~
 *.dll
 *.so
+.idea/
 *.dylib
 config.json
 # Test binary, build with `go test -c`

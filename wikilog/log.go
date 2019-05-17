@@ -5,6 +5,7 @@ import (
 	"os"
 	"fmt"
 	"io"
+	"syscall"
 )
 
 var (
@@ -12,6 +13,7 @@ var (
 	errLogger *log.Logger
 )
 func init() {
+	syscall.Umask(0)
 	errFile, err := os.OpenFile("error.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	if err != nil {
 		log.Fatal("打开日志文件失败", err)
@@ -27,5 +29,5 @@ func Info(v ...interface{}) {
 }
 
 func Error(v ...interface{}) {
-	outLogger.Output(2, fmt.Sprintln(v...))
+	errLogger.Output(2, fmt.Sprintln(v...))
 }
